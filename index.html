@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulario Web</title>
+        <meta name="description" content="Pagina web correspondiente al quiz N°1 del ramo de Ingeniería Web">
+        <meta name="keywords" content="html, formulario, ingenieria, web, css, js, ts, typescript, javascript">
+        <meta name="author" content="Felipe Andrés Fuentealba Illanes">
+
+        <!--CSS-->
+        <link rel="stylesheet" href="estilo/estilos.css">
+        <!--CSS-->
+
+        <!--BOOTSTRAP-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!--BOOTSTRAP-->
+    </head>
+    <main>
+        <script src="app.js"></script>
+
+        <form name="formulario">
+            <div class="form-group">
+                <label>Nombre Completo: </label>
+                <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="form-group">
+                <label>Correo Electronico: </label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" id="correo">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" checked="checked" id="inlineRadio1" value="option1" onclick="mostrar(this.form,0)">
+                <label class="form-check-label" for="inlineRadio1">DNI</label>
+                <input type="text" name="txt1" placeholder="DNI" id="DNI">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" onclick="mostrar(this.form,1)">
+                <label class="form-check-label" for="inlineRadio2">RUT </label>
+                <input type="text" name="txt2" placeholder="RUT" style="visibility: hidden;" id="RUT">
+            </div>
+            <br><br>
+        </form>
+        <button type="submit" class="btn btn-primary"  onclick="mensaje();">Enviar</button>
+        <div id="mostrar" hidden>
+        </div>
+    </main>
+</html>
